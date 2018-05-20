@@ -2,6 +2,7 @@
  * Don't change these constants!
  */
 const DODGER = document.getElementById('dodger')
+const DODGER_WIDTH = DODGER.clientWidth
 const GAME = document.getElementById('game')
 const GAME_HEIGHT = 400
 const GAME_WIDTH = 400
