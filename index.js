@@ -2,7 +2,6 @@
  * Don't change these constants!
  */
 const DODGER = document.getElementById('dodger')
-const DODGER_WIDTH = DODGER.clientWidth
 const GAME = document.getElementById('game')
 const GAME_HEIGHT = 400
 const GAME_WIDTH = 400
@@ -30,7 +29,7 @@ function checkCollision(rock) {
     const dodgerLeftEdge = positionToInteger(DODGER.style.left)
 
     // FIXME: The DODGER is 40 pixels wide -- how do we get the right edge?
-    const dodgerRightEdge = dodgerLeftEdge + DODGER_WIDTH
+    const dodgerRightEdge = dodgerLeftEdge + 40
 
     const rockLeftEdge = positionToInteger(rock.style.left)
 
@@ -176,7 +175,7 @@ function moveDodgerRight() {
     function move() {
     var right = positionToInteger(DODGER.style.left)
     
-    if (right < GAME_WIDTH - 40) {
+    if (right < 360) {
       DODGER.style.left = `${right + 4}px`
     }
   } 
