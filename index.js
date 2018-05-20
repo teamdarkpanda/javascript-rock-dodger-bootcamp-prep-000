@@ -124,7 +124,7 @@ function endGame() {
   ROCKS.forEach(function(rock) {
     rock.remove()
   })
-  
+  window.removeEventListener()
 }
 
 function moveDodger(e) {
