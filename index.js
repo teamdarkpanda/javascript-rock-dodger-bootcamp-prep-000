@@ -137,8 +137,7 @@ function moveDodgerLeft() {
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
    */
   function move() {
-    var leftNumbers = DODGER.style.left.replace('px', '')
-    var left = parseInt(leftNumbers, 10)
+    var left = positionToInteger(DODGER.style.left)
     
     if (left > 0) {
       DODGER.style.left = `${left - 4}px`
@@ -154,8 +153,6 @@ function moveDodgerRight() {
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
    */
     function move() {
-    //var rightNumbers = DODGER.style.left.replace('px', '')
-    //var right = parseInt(rightNumbers, 10)
     var right = positionToInteger(DODGER.style.left)
     
     if (right < GAME_WIDTH - DODGER_WIDTH) {
